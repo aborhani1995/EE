@@ -1,0 +1,24 @@
+<configuration>
+  <module class="at.uibk.dps.ee.control.modules.EnactmentAgentModule">
+    <property name="pauseOnStart">true</property>
+  </module>
+  <module class="at.uibk.dps.ee.io.modules.InputReaderFileModule">
+    <property name="filePath">/home/fedor/Repositories/gitHub/Workflows/Sentiment-Analysis/input/input-200-tweets.json</property>
+  </module>
+  <module class="at.uibk.dps.ee.io.modules.LoggingModule">
+    <property name="pathToConfigFile">./logging/config/logback.xml</property>
+  </module>
+  <module class="at.uibk.dps.ee.io.modules.OutputPrinterModule"/>
+  <module class="at.uibk.dps.ee.io.modules.SpecificationInputModule">
+    <property name="filePathAfcl">/home/fedor/Repositories/gitHub/Workflows/Sentiment-Analysis/workflow.yaml</property>
+    <property name="filePathMappingFile">/home/fedor/Repositories/gitHub/Workflows/Sentiment-Analysis/aws/typeMappings.json</property>
+  </module>
+  <module class="at.uibk.dps.ee.visualization.modules.EnactmentViewerModule">
+    <property name="closeOnTerminate">false</property>
+    <property name="updatePeriodMs">100</property>
+  </module>
+  <module class="at.uibk.dps.sc.core.modules.SchedulerModule">
+    <property name="schedulingMode">Random</property>
+    <property name="mappingsToPick">1</property>
+  </module>
+</configuration>
